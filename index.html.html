@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr""eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoostAbos - Boostez vos Réseaux Sociaux</title>
+    <style>
+        /* Un style CSS simple et moderne directement intégré */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 40px; text-align: center; }
+        .container { max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        label { display: block; text-align: left; margin: 15px 0 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .success { background-color: #d4edda; color: #155724; padding: 15px; border-radius: 6px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀TRESOR BOOSTER</h1>
+    <p>Augmentez votre visibilité en quelques clics avec 🚀TRESOR BOOSTER</p>
+    <hr>
+
+    <!-- Formulier qui envoie les données à notre script Python -->
+    <form action="/booster" method="POST">
+        <label for="platform">Choisissez le réseau :</label>
+        <select name="platform" id="platform">
+            <option value="Instagram">Instagram</option>
+            <option value="TikTok">TikTok</option>
+            <option value="YouTube">YouTube</option>
+        </select>
+
+        <label for="username">Nom d'utilisateur (Ex: @mon_compte) :</label>
+        <input type="text" name="username" id="username" placeholder="@tresor" required>
+
+        <label for="quantity">Nombre d'abonnés souhaité :</label>
+        <select name="quantity" id="quantity">
+            <option value="100">100 abonnés (Gratuit)</option>
+            <option value="500">500 abonnés</option>
+            <option value="1000">1000 abonnés</option>
+        </select>
+
+        <button type="submit">Booster maintenant !</button>
+    </form>
+    <hr>
+    <!-- Section de paiement -->
+ <!-- Si Python renvoie une confirmation, elle s'affiche ici -->
+    {% if confirmation %}
+        <div class="success">
+            { confirmation } 
+        </div>
+        <h2>Paiement</h2> <div>
+<button id="checkout-button">Payer avec Stripe</button>
+     confirmer
+</div>
+
+</body>
+</html>
